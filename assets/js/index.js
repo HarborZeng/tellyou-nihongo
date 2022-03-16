@@ -64,7 +64,10 @@ Source:
 (function(){
 
   var index = new FlexSearch.Document({
-    tokenize: "forward",
+    encode: false,
+    tokenize: function(str){
+        return str.replace(/[\x00-\x7F]/g, "").split("");
+    },
     cache: 100,
     document: {
       id: 'id',
