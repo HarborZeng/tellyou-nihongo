@@ -64,7 +64,9 @@ Source:
 (function(){
 
   var index = new FlexSearch.Document({
-    encode: false,
+    encode: function (str){
+      return str.split("");
+    },
     tokenize: function(str){
         return str.replace(/[\x00-\x7F]/g, "").split("");
     },
