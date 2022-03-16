@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://getdoks.org/">
-    <img alt="Doks" src="https://doks.netlify.app/logo-doks.svg" width="60">
+    <img alt="Doks" src="https://doks.netlify.app/doks.svg" width="60">
   </a>
 </p>
 
@@ -9,7 +9,7 @@
 </h1>
 
 <h3 align="center">
-  Doks Child Theme
+  Modern Documentation Theme
 </h3>
 
 <p align="center">
@@ -17,17 +17,20 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/h-enk/doks-child-theme/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/h-enk/doks-child-theme?style=flat-square" alt="GitHub">
+  <a href="https://github.com/h-enk/doks/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/h-enk/doks?style=flat-square" alt="GitHub">
   </a>
-  <a href="https://github.com/h-enk/doks-child-theme/releases">
-    <img src="https://img.shields.io/github/v/release/h-enk/doks-child-theme?include_prereleases&style=flat-square"alt="GitHub release (latest SemVer including pre-releases)">
+  <a href="https://github.com/h-enk/doks/releases">
+    <img src="https://img.shields.io/github/v/release/h-enk/doks?include_prereleases&style=flat-square"alt="GitHub release (latest SemVer including pre-releases)">
   </a>
-  <a href="https://github.com/h-enk/doks-child-theme/actions/workflows/codeql-analysis.yml">
-    <img src="https://img.shields.io/github/workflow/status/h-enk/doks-child-theme/CodeQL/master?style=flat-square" alt="GitHub Workflow Status (branch)">
+  <a href="https://www.npmjs.com/package/@hyas/doks">
+    <img src="https://img.shields.io/npm/v/@hyas/doks?style=flat-square" alt="npm (scoped)">
   </a>
-  <a href="https://app.netlify.com/sites/hyas-child-theme/deploys">
-    <img src="https://img.shields.io/netlify/75395a37-8537-4410-a8c3-d56bf27ec963?style=flat-square" alt="Netlify">
+  <a href="https://github.com/h-enk/doks/actions?query=workflow%3A%22Hyas+CI%22">
+    <img src="https://img.shields.io/github/workflow/status/h-enk/doks/Hyas%20CI/master?style=flat-square" alt="GitHub Workflow Status (branch)">
+  </a>
+  <a href="https://app.netlify.com/sites/doks/deploys">
+    <img src="https://img.shields.io/netlify/8a1009d5-88ac-413e-96ef-3f928674a083?style=flat-square" alt="Netlify">
   </a>
 </p>
 
@@ -35,7 +38,7 @@
 
 ## Demo
 
-- [doks-child-theme.netlify.app](https://doks-child-theme.netlify.app/)
+- [doks.netlify.app](https://doks.netlify.app/)
 
 ## Why Doks?
 
@@ -69,9 +72,15 @@ Nine main reasons why you should use Doks:
 
 ## Requirements
 
-Doks uses npm to centralize dependency management, making it [easy to update](https://getdoks.org/docs/help/how-to-update/) resources, build tooling, plugins, and build scripts:
+- [Git](https://git-scm.com/) — latest source release
+- [Node.js](https://nodejs.org/) — latest LTS version or newer
 
-- Download and install [Node.js](https://nodejs.org/) (it includes npm) for your platform.
+<details>
+<summary>Why Node.js?</summary>
+
+Doks uses npm (included with Node.js) to centralize dependency management, making it [easy to update](https://getdoks.org/docs/help/how-to-update/) resources, build tooling, plugins, and build scripts.
+
+</details>
 
 ## Get started
 
@@ -79,24 +88,34 @@ Start a new Doks project in three steps:
 
 ### 1. Create a new site
 
-Doks is available as a child theme, and a starter theme:
+Doks is available as a child theme and a starter theme.
 
-- Use the Doks child theme, if you do __not__ plan to customize a lot, and/or need future Doks updates.
-- Use the Doks starter theme, if you plan to customize a lot, and/or do __not__ need future Doks updates.
+#### Child theme
 
-Not quite sure? Use the Doks child theme.
-
-#### Doks child theme
+- Intended for novice to intermediate users
+- Intended for minor customizations
+- [Easily update npm packages](https://getdoks.org/docs/help/how-to-update/) — __including__ [Doks](https://www.npmjs.com/package/@hyas/doks)
 
 ```bash
 git clone https://github.com/h-enk/doks-child-theme.git my-doks-site && cd my-doks-site
 ```
 
-#### Doks starter theme
+#### Starter theme
+
+- Intended for intermediate to advanced users
+- Intended for major customizations
+- [Easily update npm packages](https://getdoks.org/docs/help/how-to-update/)
 
 ```bash
 git clone https://github.com/h-enk/doks.git my-doks-site && cd my-doks-site
 ```
+
+<details>
+<summary>Help me choose</summary>
+
+Not sure which one is for you? Pick the child theme.
+
+</details>
 
 ### 2. Install dependencies
 
@@ -130,10 +149,11 @@ Doks comes with [commands](https://getdoks.org/docs/prologue/commands/) for comm
 
 Support this project by becoming a sponsor. Your logo will show up here with a link to your website.
 
-[![OC sponsor 0](https://opencollective.com/doks/sponsor/0/avatar.svg)](https://opencollective.com/doks/sponsor/0/website)
+[![OC sponsor 0](https://opencollective.com/doks/tiers/sponsor/0/avatar.svg)](https://opencollective.com/doks/tiers/sponsor/0/website)
+[![OC sponsor 1](https://opencollective.com/doks/tiers/sponsor/1/avatar.svg)](https://opencollective.com/doks/tiers/sponsor/1/website)
 
 ## Backers
 
 Support this project by becoming a backer. Your avatar will show up here.
 
-[![Backers](https://opencollective.com/doks/backers.svg)](https://opencollective.com/doks)
+[![Backers](https://opencollective.com/doks/tiers/backer.svg)](https://opencollective.com/doks)
