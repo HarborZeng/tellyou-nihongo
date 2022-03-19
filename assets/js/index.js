@@ -67,9 +67,6 @@ Source:
     encode: function (str){
       return str.split("");
     },
-    tokenize: function(str){
-        return str.replace(/[\x00-\x7F]/g, "").split("");
-    },
     cache: 100,
     document: {
       id: 'id',
