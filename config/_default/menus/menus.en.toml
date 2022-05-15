@@ -53,29 +53,29 @@
 [[main]]
   name = "五十音"
   weight = 40
-  identifier = "quick-start"
+  identifier = "50yin"
   url = "/docs/五十音/饼干老师五十音/"
   parent = "get-started"
 
 [[main]]
   name = "小李赴日"
   weight = 50
-  identifier = "tutorial"
+  identifier = "xiaolifuri"
   url = "/docs/新版标准日本语初级上册/饼干老师/002第一课/"
   parent = "get-started"
 
 [[main]]
   name = "森赴北京"
   weight = 60
-  identifier = "tutorial"
+  identifier = "senfubeijing"
   url = "/docs/新版标准日本语初级下册/饼干老师/001第二十五课/"
   parent = "get-started"
 
 [[main]]
   name = "中级上册"
   weight = 70
-  identifier = "tutorial"
-  url = "/docs/新版标准日本语中级上册/饼干老师/001初级总结/"
+  identifier = "zhomgjishangce"
+  url = "/docs/新版标准日本语中级上册/饼干老师/001基础知识总结/"
   parent = "get-started"
 
 [[social]]
