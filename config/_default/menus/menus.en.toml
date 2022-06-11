@@ -58,14 +58,14 @@
   parent = "get-started"
 
 [[main]]
-  name = "小李赴日"
+  name = "初级上册"
   weight = 50
   identifier = "xiaolifuri"
   url = "/docs/新版标准日本语初级上册/饼干老师/002第一课/"
   parent = "get-started"
 
 [[main]]
-  name = "森赴北京"
+  name = "初级下册"
   weight = 60
   identifier = "senfubeijing"
   url = "/docs/新版标准日本语初级下册/饼干老师/001第二十五课/"
@@ -74,7 +74,7 @@
 [[main]]
   name = "中级上册"
   weight = 70
-  identifier = "zhomgjishangce"
+  identifier = "zhongjishangce"
   url = "/docs/新版标准日本语中级上册/饼干老师/001基础知识总结/"
   parent = "get-started"
 
@@ -82,7 +82,7 @@
   name = "GitHub"
   pre = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-github\"><path d=\"M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22\"></path></svg>"
   url = "https://github.com/harborzeng/tellyou-nihongo"
-  post = "v0.1.0"
+  post = "v1.0.0"
   weight = 10
 
 # [[social]]

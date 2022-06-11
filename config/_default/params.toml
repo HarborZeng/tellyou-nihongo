@@ -46,11 +46,12 @@ siteLinksSearchBox = false
 themeColor = "#fff"
 
 # Images
-quality = 85
+quality = 100
 bgColor = "#fff"
-landscapePhotoWidths = [900, 800, 700, 600, 500]
-portraitPhotoWidths = [800, 700, 600, 500]
-lqipWidth = "20x"
+responsive = false
+landscapePhotoWidths = [900, 500]
+portraitPhotoWidths = [800, 500]
+lqipWidth = "100x"
 smallLimit = "300"
 
 # Footer
@@ -79,10 +80,10 @@ lastMod = false
   lazySizes = true
   clipBoard = true
   instantPage = true
-  flexSearch = true
+  flexSearch = false
   darkMode = true
   bootStrapJs = true
-  breadCrumb = false
+  breadCrumb = true
   highLight = false
   kaTex = false
   multilingualMode = false
