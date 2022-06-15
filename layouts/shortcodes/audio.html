@@ -1,0 +1,15 @@
+
+<figure>
+  <figcaption>{{ with .Get "caption" }} {{ . | safeHTML }}{{ end -}}</figcaption>
+  <audio
+    preload="none"
+    style="width: 100%"
+    controls
+    {{ with .Get "src" -}}
+    src="{{ . | relURL }}"
+    {{ end -}}
+  >
+  Your browser does not support the
+    <code>audio</code> element.
+  </audio>
+</figure>

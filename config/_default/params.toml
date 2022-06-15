@@ -74,7 +74,7 @@ docsRepo = "https://github.com/HarborZeng/tellyou-nihongo"
 docsRepoBranch = "master"
 docsRepoSubPath = ""
 editPage = true
-lastMod = false
+lastMod = true
 
 [options]
   lazySizes = true
