@@ -94,3 +94,9 @@ lastMod = true
   [menu.section]
     auto = true
     collapsibleSidebar = true
+
+[comments]
+  [comments.waline]
+    enabled = true
+    serverUrl = "https://tellyou-nihonngo-waline.vercel.app/"
+    pageSize = 15

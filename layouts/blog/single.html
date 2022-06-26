@@ -11,4 +11,7 @@
     </article>
   </div>
 </div>
+{{ if .Site.Params.comments.waline.enabled -}}
+<div id="waline"></div>
+{{ end }}
 {{ end }}

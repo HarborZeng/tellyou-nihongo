@@ -41,13 +41,9 @@
 				{{ end -}}
 			</div>
 			{{ partial "main/docs-navigation.html" . }}
-			<!--
-			{{ if not .Site.Params.options.collapsibleSidebar -}}
-				{{ partial "main/docs-navigation.html" . }}
-			{{ else -}}
-				<div class="my-n3"></div>
-			{{ end -}}
-			-->
-		</main>
+      {{ if .Site.Params.comments.waline.enabled -}}
+        <div id="waline" style="margin-top: 40px"></div>
+      {{ end }}
+    </main>
 	</div>
 {{ end }}
