@@ -7,23 +7,23 @@
   NPM_VERSION = "8.1.2"
 
 [context.production]
-  command = "npm run build"
+  command = "git config core.quotePath false && npm run build"
 
 [context.deploy-preview]
-  command = "npm run build -- -b $DEPLOY_PRIME_URL"
+  command = "git config core.quotePath false && npm run build -- -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-  command = "npm run build -- -b $DEPLOY_PRIME_URL"
+  command = "git config core.quotePath false && npm run build -- -b $DEPLOY_PRIME_URL"
 
 [context.next]
-  command = "npm run build"
+  command = "git config core.quotePath false && npm run build"
 
 [context.next.environment]
   HUGO_ENV = "next"
 
 [dev]
   framework = "#custom"
-  command = "npm run start"
+  command = "git config core.quotePath false && npm run start"
   targetPort = 1313
   port = 8888
   publish = "public"
