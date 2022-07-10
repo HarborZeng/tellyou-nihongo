@@ -89,6 +89,7 @@ lastMod = true
   multilingualMode = false
   docsVersioning = false
   fullWidth = false
+  translate = true
 
 [menu]
   [menu.section]
