@@ -28,6 +28,12 @@
   {{ $slice = $slice | append $clipBoard -}}
 {{ end -}}
 
+{{ if .Site.Params.options.translate -}}
+  {{ $translateJAToZH := resources.Get "js/translate_ja_to_zh.js" -}}
+  {{ $translateJAToZH := $translateJAToZH | js.Build -}}
+  {{ $slice = $slice | append $translateJAToZH -}}
+{{ end -}}
+
 {{ if .Site.Params.options.instantPage -}}
   {{ $instantPage := resources.Get "js/instant.page.js" -}}
   {{ $instantPage := $instantPage | js.Build -}}
