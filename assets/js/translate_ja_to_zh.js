@@ -1,7 +1,7 @@
 // {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
 
 function translate_ja_to_zh(e) {
-  return fetch('https://ja.tellyouwhat.cn/.netlify/functions/tmt-ja-zh', {
+  return fetch('/.netlify/functions/tmt-ja-zh', {
     method: 'POST',
     body: e.innerText,
   }).then(function (response) {
