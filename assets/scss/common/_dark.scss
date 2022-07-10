@@ -61,7 +61,7 @@ $navbar-dark-active-color:          $link-color-dark;
   color: $link-color-dark;
 }
 
-[data-dark-mode] body a.btn-translate,
+[data-dark-mode] body .btn-translate,
 [data-dark-mode] body .btn-menu svg {
   color: $body-color-dark;
 }
@@ -94,6 +94,19 @@ $navbar-dark-active-color:          $link-color-dark;
 
 [data-dark-mode] body .offcanvas-header {
   border-bottom: 1px solid $gray-800;
+}
+
+[data-dark-mode] body .figure-img {
+  filter: brightness(0.6);
+}
+
+[data-dark-mode] body .wl-comment {
+  --waline-bgcolor: #0000;
+  --waline-color: #fff;
+  --waline-bgcolor-light: #0004;
+}
+[data-dark-mode] body .icon {
+  fill: $body-color-dark;
 }
 
 [data-dark-mode] body .offcanvas .nav-link {
@@ -239,6 +252,10 @@ $navbar-dark-active-color:          $link-color-dark;
 
 [data-dark-mode] body .content img[src^="https://latex.codecogs.com/svg.latex"] {
   filter: invert(1);
+}
+
+[data-dark-mode] body .icon:hover {
+  fill: $navbar-dark-hover-color;
 }
 
 [data-dark-mode] body .navbar .btn-link:hover {
