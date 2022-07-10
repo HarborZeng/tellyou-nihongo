@@ -64,5 +64,8 @@
   },
   "otherDependencies": {
     "hugo": "0.92.1"
+  },
+  "dependencies": {
+    "tencentcloud-sdk-nodejs": "^4.0.378"
   }
 }
