@@ -61,6 +61,7 @@ $navbar-dark-active-color:          $link-color-dark;
   color: $link-color-dark;
 }
 
+[data-dark-mode] body a.btn-translate,
 [data-dark-mode] body .btn-menu svg {
   color: $body-color-dark;
 }
