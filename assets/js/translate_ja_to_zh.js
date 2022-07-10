@@ -3,7 +3,7 @@
 function translate_ja_to_zh(e) {
   return fetch('/.netlify/functions/tmt-ja-zh', {
     method: 'POST',
-    body: e.innerText,
+    body: e.innerText.replaceAll(/（[^）]+）/g, ''),
   }).then(function (response) {
     return response.text();
   }).then(function (data) {
