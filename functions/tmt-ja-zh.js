@@ -2,8 +2,9 @@ const tencentcloud = require('tencentcloud-sdk-nodejs');
 
 const TmtClient = tencentcloud.tmt.v20180321.Client;
 
-const SECRET_ID = 'AKID5CFD5xobJwWwsfBUZ2NYWFGCvOdzBAuq'
-const SECRET_KEY = 'oQQFrFPOOI3f3HNH1b0GMFwVuAJIAtWw'
+const { SECRET_ID } = process.env;
+const { SECRET_KEY } = process.env;
+
 
 exports.handler = async (event, context) => {
   const clientConfig = {
