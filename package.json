@@ -1,7 +1,7 @@
 {
   "name": "@harborzeng/tellyou-nihongo",
   "description": "告你日语",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "browserslist": [
     "defaults"
   ],
