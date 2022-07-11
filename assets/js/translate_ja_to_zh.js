@@ -42,6 +42,9 @@ function translate_ja_to_zh(e) {
       li.insertAdjacentElement('beforeend', bq)
 
       translate_ja_to_zh(li).then(r => {
+        div3.remove()
+        div2.remove()
+        div1.remove()
         bq.remove()
         if (r !== '') {
           let bqi = document.createElement('blockquote');
