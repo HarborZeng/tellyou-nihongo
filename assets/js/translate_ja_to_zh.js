@@ -3,7 +3,7 @@
 function translate_ja_to_zh(e) {
   return fetch('/.netlify/functions/tmt-ja-zh', {
     method: 'POST',
-    body: e.firstChild.nodeValue.replaceAll(/（[^）]+）/g, ''),
+    body: e.innerText.replaceAll(/（[^）]+）/g, ''),
   }).then(function (response) {
     return response.text();
   }).then(function (data) {
@@ -39,7 +39,6 @@ function translate_ja_to_zh(e) {
       div3.innerText = '翻译中...'
       let bq = document.createElement('blockquote');
       bq.appendChild(div1).appendChild(div2).appendChild(div3)
-      li.insertAdjacentElement('beforeend', bq)
 
       translate_ja_to_zh(li).then(r => {
         if (r !== '') {
@@ -49,6 +48,8 @@ function translate_ja_to_zh(e) {
           li.insertAdjacentElement('beforeend', bqi)
         }
       })
+      li.insertAdjacentElement('beforeend', bq)
+
       e.preventDefault;
       //reset animation
       e.target.classList.remove('doflip');
