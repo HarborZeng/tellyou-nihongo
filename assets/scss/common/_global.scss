@@ -278,3 +278,59 @@ p {
 .btn-translate {
   padding: 0 8px;
 }
+
+.doflip {
+  transform-origin: 43% 50%;
+  -moz-transform-origin: 43% 50%;
+  animation: flip_right 1.8s infinite forwards;
+  animation-delay: 0.1s;
+  animation-timing-function: cubic-bezier(.73,1.46,.95,.85);
+}
+
+@keyframes flip_right {
+  0% {
+    transform: perspective(2000px) rotateY(90deg) skewY(-3.5deg)
+  }
+  30% {
+    transform: perspective(2000px) rotateY(-25deg) skewY(-0.8deg)
+  }
+  50% {
+    transform: perspective(2000px) rotateY(20deg) skewY(0.8deg)
+  }
+  70% {
+    transform: perspective(2000px) rotateY(-10deg) skewY(-0.8deg)
+  }
+  100% {
+    transform: perspective(2000px) rotateY(0deg)
+  }
+}
+
+.t-placeholder {
+  border-radius: 6px;
+  width: 75%;
+  min-height: 35px;
+  background-color: #eee;
+}
+
+@keyframes t-placeHolderShimmer{
+  0%{
+    background-position: -468px 0
+  }
+  100%{
+    background-position: 468px 0
+  }
+}
+
+.t-animated-background {
+  animation-duration: 1.25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: t-placeHolderShimmer;
+  animation-timing-function: linear;
+  background: darkgray;
+  background: linear-gradient(to right, #eeeeee 10%, #dddddd 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+  height: 35px;
+  position: relative;
+  padding: 4px 0 0 7px;
+}

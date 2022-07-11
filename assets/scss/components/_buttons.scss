@@ -29,6 +29,10 @@
   }
 }
 
+body .icon:hover {
+  fill: $navbar-light-hover-color;
+}
+
 .navbar .btn-link:hover {
   color: $navbar-light-hover-color;
 }

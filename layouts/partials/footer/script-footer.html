@@ -112,11 +112,13 @@
 
 {{ if .Site.Params.comments.waline.enabled -}}
 <script>
-  Waline.init({
-  el: '#waline',
-  comment: true,
-  serverURL: '{{ .Site.Params.comments.waline.serverUrl }}',
-  pageSize: '{{ .Site.Params.comments.waline.pageSize }}'
-  });
+  if (document.getElementById('waline')) {
+    Waline.init({
+      el: '#waline',
+      comment: true,
+      serverURL: '{{ .Site.Params.comments.waline.serverUrl }}',
+      pageSize: '{{ .Site.Params.comments.waline.pageSize }}'
+    });
+  }
 </script>
 {{ end }}

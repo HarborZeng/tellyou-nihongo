@@ -23,7 +23,7 @@
 
 [dev]
   framework = "#custom"
-  command = "git config core.quotePath false && npm run start"
+  command = "npm run start"
   targetPort = 1313
   port = 8888
   publish = "public"
