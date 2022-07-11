@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
       secretId: SECRET_ID,
       secretKey: SECRET_KEY,
     },
-    region: 'ap-chongqing',
+    region: 'ap-singapore',
     profile: {
       httpProfile: {
         endpoint: 'tmt.tencentcloudapi.com',

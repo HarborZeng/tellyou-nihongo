@@ -4,12 +4,6 @@ function translate_ja_to_zh(e) {
   return fetch('/.netlify/functions/tmt-ja-zh', {
     method: 'POST',
     body: e.innerText.replaceAll(/（[^）]+）/g, ''),
-  }).then(function (response) {
-    if (response.statusCode === 200) {
-      return response.text();
-    } else {
-      return ''
-    }
   }).catch(function (err) {
     console.log(err);
   });
@@ -30,7 +24,8 @@ for (let i = 0; i < lis.length; i++) {
     let ticon = document.getElementById('t' + i);
     ticon.classList.add('doflip')
     translate_ja_to_zh(li).then(r => {
-      if (r !== '') {
+      console.log(r.status)
+      if (r.status === 200) {
         li.innerHTML = originText + '<br/><blockquote>' + r + '</blockquote>'
       }
       ticon.classList.remove('doflip')
