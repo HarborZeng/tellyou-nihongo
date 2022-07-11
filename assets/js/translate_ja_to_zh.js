@@ -3,7 +3,7 @@
 function translate_ja_to_zh(e) {
   return fetch('/.netlify/functions/tmt-ja-zh', {
     method: 'POST',
-    body: e.innerText.replaceAll(/（[^）]+）/g, ''),
+    body: e.firstChild.nodeValue.replaceAll(/（[^）]+）/g, ''),
   }).then(function (response) {
     return response.text();
   }).then(function (data) {
@@ -42,10 +42,6 @@ function translate_ja_to_zh(e) {
       li.insertAdjacentElement('beforeend', bq)
 
       translate_ja_to_zh(li).then(r => {
-        div3.remove()
-        div2.remove()
-        div1.remove()
-        bq.remove()
         if (r !== '') {
           let bqi = document.createElement('blockquote');
           bqi.innerText = r
@@ -59,7 +55,7 @@ function translate_ja_to_zh(e) {
       e.target.classList.add('doflip');
       setTimeout(function () {
         e.target.classList.remove('doflip');
-      }, 5000);
+      }, 15000);
     }, false)
     li.insertAdjacentElement('beforeend', btn);
   }
