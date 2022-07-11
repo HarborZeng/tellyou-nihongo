@@ -5,16 +5,13 @@ function translate_ja_to_zh(e) {
     method: 'POST',
     body: e.innerText.replaceAll(/（[^）]+）/g, ''),
   }).then(function (response) {
-    if (response.statusCode === 200) {
-      return response.text();
-    } else {
-      return '';
-    }
-  }).then(function (text) {
-    return text;
+    return response.text();
+  }).then(function (data) {
+    return data;
   }).catch(function (err) {
     console.log(err);
-  });
+    return 'error'
+  })
 }
 
 let docsContent = document.querySelector('.docs-content')
