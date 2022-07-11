@@ -26,7 +26,7 @@ for (let i = 0; i < lis.length; i++) {
     translate_ja_to_zh(li).then(r => {
       console.log(r.status)
       if (r.status === 200) {
-        li.innerHTML = originText + '<br/><blockquote>' + r + '</blockquote>'
+        li.innerHTML = originText + '<br/><blockquote>' + r.text() + '</blockquote>'
       }
       ticon.classList.remove('doflip')
     })
