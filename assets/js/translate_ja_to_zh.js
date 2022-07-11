@@ -24,7 +24,7 @@ for (let i = 0; i < lis.length; i++) {
     let ticon = document.getElementById('t' + i);
     ticon.classList.add('doflip')
     translate_ja_to_zh(li).then(r => {
-      console.log(r.status)
+      console.log(r)
       if (r.status === 200) {
         li.innerHTML = originText + '<br/><blockquote>' + r.text() + '</blockquote>'
       }
