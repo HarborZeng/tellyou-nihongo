@@ -4,13 +4,6 @@ function translate_ja_to_zh(e) {
   return fetch('/.netlify/functions/tmt-ja-zh', {
     method: 'POST',
     body: e.innerText.replaceAll(/（[^）]+）/g, ''),
-  }).then(function (response) {
-    return response.text();
-  }).then(function (data) {
-    return data;
-  }).catch(function (err) {
-    console.log(err);
-    return 'error'
   })
 }
 
@@ -30,6 +23,8 @@ function translate_ja_to_zh(e) {
       .replace('${id_holder}', 't' + i)
     btn.className = 'btn btn-translate'
     btn.addEventListener('click', function (e) {
+      //prevent from multiple clicking
+      btn.disabled = true
       let div1 = document.createElement('div');
       div1.classList.add('content-wrapper')
       let div2 = document.createElement('div');
@@ -40,17 +35,26 @@ function translate_ja_to_zh(e) {
       let bq = document.createElement('blockquote');
       bq.appendChild(div1).appendChild(div2).appendChild(div3)
 
-      translate_ja_to_zh(li).then(r => {
-        if (r !== '') {
+      translate_ja_to_zh(li).then(function (response) {
+        if (response.statusCode !== 200) {
+          btn.disabled = false
+          bq.remove()
+          console.error(response.body)
+          return
+        }
+        return response.text();
+      }).then(function (text) {
+        if (text) {
           let bqi = document.createElement('blockquote');
-          bqi.innerText = r
+          bqi.innerText = text
           li.innerHTML = originText
           li.insertAdjacentElement('beforeend', bqi)
         }
+      }).catch(function (err) {
+        console.error(err);
       })
       li.insertAdjacentElement('beforeend', bq)
 
-      e.preventDefault;
       //reset animation
       e.target.classList.remove('doflip');
       e.target.classList.add('doflip');
