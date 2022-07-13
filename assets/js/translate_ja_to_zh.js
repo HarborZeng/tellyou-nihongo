@@ -36,10 +36,10 @@ function translate_ja_to_zh(e) {
       bq.appendChild(div1).appendChild(div2).appendChild(div3)
 
       translate_ja_to_zh(li).then(function (response) {
-        if (response.statusCode !== 200) {
+        if (response.status !== 200) {
           btn.disabled = false
           bq.remove()
-          console.error(response.body)
+          e.target.classList.remove('doflip');
           return
         }
         return response.text();
