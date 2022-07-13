@@ -26,7 +26,7 @@ function translate_ja_to_zh(jaText) {
       //prevent from multiple clicking
       btn.disabled = true
 
-      let jaText = e.innerText.replaceAll(/（[^）]+）/g, '')
+      let jaText = li.innerText.replaceAll(/（[^）]+）/g, '')
       if (!jaText) {
         return
       }
