@@ -1,9 +1,9 @@
 // {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
 
-function translate_ja_to_zh(e) {
+function translate_ja_to_zh(jaText) {
   return fetch('/.netlify/functions/tmt-ja-zh', {
     method: 'POST',
-    body: e.innerText.replaceAll(/（[^）]+）/g, ''),
+    body: jaText,
   })
 }
 
@@ -25,6 +25,12 @@ function translate_ja_to_zh(e) {
     btn.addEventListener('click', function (e) {
       //prevent from multiple clicking
       btn.disabled = true
+
+      let jaText = e.innerText.replaceAll(/（[^）]+）/g, '')
+      if (!jaText) {
+        return
+      }
+
       let div1 = document.createElement('div');
       div1.classList.add('content-wrapper')
       let div2 = document.createElement('div');
@@ -35,7 +41,7 @@ function translate_ja_to_zh(e) {
       let bq = document.createElement('blockquote');
       bq.appendChild(div1).appendChild(div2).appendChild(div3)
 
-      translate_ja_to_zh(li).then(function (response) {
+      translate_ja_to_zh(jaText).then(function (response) {
         if (response.status !== 200) {
           return
         }
