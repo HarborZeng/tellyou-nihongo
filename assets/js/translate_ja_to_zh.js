@@ -37,9 +37,6 @@ function translate_ja_to_zh(e) {
 
       translate_ja_to_zh(li).then(function (response) {
         if (response.status !== 200) {
-          btn.disabled = false
-          bq.remove()
-          e.target.classList.remove('doflip');
           return
         }
         return response.text();
@@ -51,7 +48,9 @@ function translate_ja_to_zh(e) {
           li.insertAdjacentElement('beforeend', bqi)
         }
       }).catch(function (err) {
-        console.error(err);
+        btn.disabled = false
+        bq.remove()
+        e.target.classList.remove('doflip');
       })
       li.insertAdjacentElement('beforeend', bq)
 
