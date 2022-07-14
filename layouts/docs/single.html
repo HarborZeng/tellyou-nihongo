@@ -31,7 +31,7 @@
 				{{ partial "sidebar/docs-toc.html" . }}
 			</nav>
 			{{ end -}}
-			{{ .Content }}
+      {{ .Content | replaceRE `\[([一-龥]+)\]\^\(([ァ-ヶぁ-ん]+)\)` "<ruby>$1<rt>$2</rt></ruby>" | safeHTML }}
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				{{ if .Site.Params.lastMod -}}
 					{{ partial "main/last-modified.html" . }}
