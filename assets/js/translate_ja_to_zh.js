@@ -16,6 +16,9 @@ function translate_ja_to_zh(jaText) {
   for (let i = 0; i < lis.length; i++) {
     let li = lis[i]
     let originText = li.innerHTML;
+    if (!originText.match(/[ァ-ヶぁ-ん|ー]+/)) {
+      continue
+    }
     let btn = document.createElement('button');
     btn.type = 'button'
     btn.title = '翻译'
