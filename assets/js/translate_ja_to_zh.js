@@ -29,7 +29,25 @@ function translate_ja_to_zh(jaText) {
       //prevent from multiple clicking
       btn.disabled = true
 
-      let jaText = li.innerText.replaceAll(/（[^）]+）/g, '')
+      let jaText = ''
+      let node = li.firstChild
+      let lastNode
+      while (node && node.nodeName !== 'BUTTON') {
+        if (node.nodeName === '#text') {
+          jaText += node.nodeValue
+          if (lastNode) {
+            node = lastNode
+            lastNode = null
+          }
+        } else {
+          lastNode = node
+          node = node.firstChild
+          continue
+        }
+        node = node.nextSibling
+      }
+      jaText = jaText.replaceAll(/（[^）]+）/g, '')
+
       if (!jaText) {
         return
       }
