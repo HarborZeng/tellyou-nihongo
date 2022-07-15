@@ -16,9 +16,9 @@ $link-color-dark: $blue-300;
 $button-color-dark: $link-color-dark;
 $focus-color-dark: lighten($link-color-dark, 2.5%);
 
-$navbar-dark-color:                 $body-color-dark;
-$navbar-dark-hover-color:           $link-color-dark;
-$navbar-dark-active-color:          $link-color-dark;
+$navbar-dark-color: $body-color-dark;
+$navbar-dark-hover-color: $link-color-dark;
+$navbar-dark-active-color: $link-color-dark;
 
 /** Theme styles */
 
@@ -105,6 +105,7 @@ $navbar-dark-active-color:          $link-color-dark;
   --waline-color: #fff;
   --waline-bgcolor-light: #0004;
 }
+
 [data-dark-mode] body .icon {
   fill: $body-color-dark;
 }
@@ -576,4 +577,10 @@ $navbar-dark-active-color:          $link-color-dark;
 
 [data-dark-mode] details summary::before {
   content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28222, 226, 230, 0.75%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+}
+
+[data-dark-mode] .t-animated-background {
+  background: $gray-900;
+  background: linear-gradient(to right, $gray-900 10%, $gray-800 18%, $gray-900 33%);
+  animation-duration: 2.25s;
 }
