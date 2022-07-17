@@ -60,12 +60,12 @@
     "purgecss-whitelister": "^2.4",
     "shx": "^0.3.4",
     "stylelint": "^14.3",
-    "stylelint-config-standard-scss": "^4.0"
+    "stylelint-config-standard-scss": "^5.0"
   },
   "otherDependencies": {
     "hugo": "0.92.1"
   },
   "dependencies": {
-    "tencentcloud-sdk-nodejs": "^4.0.378"
+    "tencentcloud-sdk-nodejs": "^4.0.381"
   }
 }
