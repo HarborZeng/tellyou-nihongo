@@ -71,7 +71,7 @@ function translateJAToZH(jaText) {
         if (text) {
           let bqi = document.createElement('blockquote');
           bqi.innerText = text
-          li.replaceChild(li.lastChild, bqi)
+          li.replaceChild(bqi, li.lastChild)
         }
       }).catch(function (err) {
         btn.disabled = false
