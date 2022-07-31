@@ -76,6 +76,7 @@ function translateJAToZH(jaText) {
       }).catch(function (err) {
         btn.disabled = false
         bq.remove()
+      }).finally(function () {
         e.target.classList.remove('doflip');
       })
       li.insertAdjacentElement('beforeend', bq)
@@ -85,7 +86,7 @@ function translateJAToZH(jaText) {
       e.target.classList.add('doflip');
       setTimeout(function () {
         e.target.classList.remove('doflip');
-      }, 15000);
+      }, 5000);
     }, false)
     li.insertAdjacentElement('beforeend', btn);
   }

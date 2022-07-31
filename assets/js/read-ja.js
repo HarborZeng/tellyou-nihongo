@@ -1,19 +1,3 @@
-function readJA(jaText) {
-  {{ $sp := .Site.Params.voice.speaker -}}
-  {{ $pitch := .Site.Params.voice.pitch -}}
-  {{ $rate := .Site.Params.voice.rate -}}
-  let voices = speechSynthesis.getVoices();
-  let jaVoices = voices.filter(o => o.lang === 'ja-JP' && !o.localService);
-  let jaVoicesLocal = voices.filter(o => o.lang === 'ja-JP' && o.localService);
-  let index = Math.floor(Math.random() * jaVoices.length);
-  let indexLocal = Math.floor(Math.random() * jaVoices.length);
-  let utterThis = new SpeechSynthesisUtterance(jaText);
-  utterThis.voice = voices.length === 0 ? jaVoicesLocal[indexLocal] : jaVoices[index]; // 设置说话的声音
-  utterThis.pitch = {{ $pitch }}; // 设置音调高低
-  utterThis.rate = {{ $rate }}; // 设置说话的速度
-  window.speechSynthesis.speak(utterThis);
-}
-
 (function () {
   let docsContent = document.querySelector('.docs-content')
   if (!docsContent) {
@@ -58,8 +42,23 @@ function readJA(jaText) {
         return
       }
 
-      readJA(jaText)
-      btn.disabled = false
+      {{ $sp := .Site.Params.voice.speaker -}}
+      {{ $pitch := .Site.Params.voice.pitch -}}
+      {{ $rate := .Site.Params.voice.rate -}}
+      let voices = speechSynthesis.getVoices();
+      let jaVoices = voices.filter(o => o.lang === 'ja-JP' && !o.localService);
+      let jaVoicesLocal = voices.filter(o => o.lang === 'ja-JP' && o.localService);
+      let index = Math.floor(Math.random() * jaVoices.length);
+      let indexLocal = Math.floor(Math.random() * jaVoices.length);
+      let utterThis = new SpeechSynthesisUtterance(jaText);
+      utterThis.voice = voices.length === 0 ? jaVoicesLocal[indexLocal] : jaVoices[index]; // 设置说话的声音
+      utterThis.pitch = {{ $pitch }}; // 设置音调高低
+      utterThis.rate = {{ $rate }}; // 设置说话的速度
+      utterThis.onend = function () {
+        node.disabled = false
+      }
+      window.speechSynthesis.speak(utterThis);
+
     }, false)
     li.insertAdjacentElement('beforeend', btn);
   }
