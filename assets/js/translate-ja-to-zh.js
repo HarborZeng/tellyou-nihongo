@@ -71,8 +71,7 @@ function translateJAToZH(jaText) {
         if (text) {
           let bqi = document.createElement('blockquote');
           bqi.innerText = text
-          li.innerHTML = originText
-          li.insertAdjacentElement('beforeend', bqi)
+          li.lastElementChild = bqi
         }
       }).catch(function (err) {
         btn.disabled = false
