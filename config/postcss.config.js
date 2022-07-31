@@ -26,6 +26,8 @@ module.exports = {
         'btn-translate',
         't-placeholder',
         't-animated-background',
+        'compare',
+        'v',
         ...whitelister([
           './assets/scss/components/_alerts.scss',
           './assets/scss/components/_buttons.scss',
