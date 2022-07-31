@@ -50,12 +50,16 @@
       let jaVoicesLocal = voices.filter(o => o.lang === 'ja-JP' && o.localService);
       let index = Math.floor(Math.random() * jaVoices.length);
       let indexLocal = Math.floor(Math.random() * jaVoices.length);
+      if (jaVoices.length === 0 && jaVoicesLocal.length === 0) {
+        btn.disabled = false
+        return
+      }
       let utterThis = new SpeechSynthesisUtterance(jaText);
       utterThis.voice = voices.length === 0 ? jaVoicesLocal[indexLocal] : jaVoices[index]; // 设置说话的声音
       utterThis.pitch = {{ $pitch }}; // 设置音调高低
       utterThis.rate = {{ $rate }}; // 设置说话的速度
       utterThis.onend = function () {
-        node.disabled = false
+        btn.disabled = false
       }
       window.speechSynthesis.speak(utterThis);
 
