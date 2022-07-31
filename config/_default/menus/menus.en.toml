@@ -28,12 +28,6 @@
 #   identifier = "lorem"
 #   url = "/tutorial/lorem/"
 
-[[main]]
-  name = "笔记"
-  url = "/docs/五十音/饼干老师五十音/"
-# url = "/docs/1.0/prologue/introduction/"
-  weight = 10
-
 # [[main]]
 #   name = "Tutorial"
 #   url = "/tutorial/lorem/ipsum/"
@@ -45,38 +39,45 @@
   weight = 20
 
 [[main]]
-  name = "开始"
-  weight = 30
-  identifier = "get-started"
-  url = "/docs/prologue/introduction/"
+  name = "对比"
+  url = "/compare/"
+  weight = 21
+
+[[main]]
+  name = "笔记"
+  weight = 10
+  identifier = "notes"
+
+[[main]]
+  name = "新标日"
+  weight = 10
+  identifier = "xbr"
+  parent = "notes"
 
 [[main]]
   name = "五十音"
-  weight = 40
+  weight = 1
   identifier = "50yin"
   url = "/docs/五十音/饼干老师五十音/"
-  parent = "get-started"
+  parent = "notes"
 
 [[main]]
   name = "初级上册"
-  weight = 50
-  identifier = "xiaolifuri"
+  weight = 10
   url = "/docs/新版标准日本语初级上册/饼干老师/002第一课/"
-  parent = "get-started"
+  parent = "xbr"
 
 [[main]]
   name = "初级下册"
-  weight = 60
-  identifier = "senfubeijing"
+  weight = 20
   url = "/docs/新版标准日本语初级下册/饼干老师/001第二十五课/"
-  parent = "get-started"
+  parent = "xbr"
 
 [[main]]
   name = "中级上册"
-  weight = 70
-  identifier = "zhongjishangce"
+  weight = 30
   url = "/docs/新版标准日本语中级上册/饼干老师/001基础知识总结/"
-  parent = "get-started"
+  parent = "xbr"
 
 [[social]]
   name = "GitHub"

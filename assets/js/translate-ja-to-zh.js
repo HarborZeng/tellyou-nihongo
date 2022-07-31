@@ -1,6 +1,6 @@
 // {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
 
-function translate_ja_to_zh(jaText) {
+function translateJAToZH(jaText) {
   return fetch('/.netlify/functions/tmt-ja-zh', {
     method: 'POST',
     body: jaText,
@@ -62,7 +62,7 @@ function translate_ja_to_zh(jaText) {
       let bq = document.createElement('blockquote');
       bq.appendChild(div1).appendChild(div2).appendChild(div3)
 
-      translate_ja_to_zh(jaText).then(function (response) {
+      translateJAToZH(jaText).then(function (response) {
         if (response.status !== 200) {
           return
         }

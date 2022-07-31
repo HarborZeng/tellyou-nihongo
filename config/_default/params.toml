@@ -91,6 +91,10 @@ lastMod = true
   fullWidth = false
   translate = true
 
+[voice]
+  enabled = true
+  speaker = "xiaoxiao"
+
 [menu]
   [menu.section]
     auto = true
