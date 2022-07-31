@@ -44,22 +44,21 @@
   weight = 21
 
 [[main]]
-  name = "笔记"
-  weight = 10
-  identifier = "notes"
-
-[[main]]
-  name = "新标日"
+  name = "新标日笔记"
   weight = 10
   identifier = "xbr"
-  parent = "notes"
 
 [[main]]
   name = "五十音"
   weight = 1
   identifier = "50yin"
+
+[[main]]
+  name = "饼干老师"
+  weight = 1
+  identifier = "binggan"
   url = "/docs/五十音/饼干老师五十音/"
-  parent = "notes"
+  parent = "50yin"
 
 [[main]]
   name = "初级上册"
