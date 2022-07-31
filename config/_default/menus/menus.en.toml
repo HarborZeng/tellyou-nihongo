@@ -34,49 +34,98 @@
 #   weight = 15
 
 [[main]]
-  name = "文章"
-  url = "/blog/"
-  weight = 20
+name = "五十音"
+weight = 1
+identifier = "50yin"
+
+[[main]]
+name = "饼干"
+weight = 1
+identifier = "binggan"
+url = "/docs/五十音/饼干老师五十音/"
+parent = "50yin"
+
+[[main]]
+name = "新标日笔记"
+weight = 10
+identifier = "xbr"
+
+[[main]]
+name = "饼干初上"
+weight = 10
+url = "/docs/新版标准日本语初级上册/饼干老师/002第一课/"
+parent = "xbr"
+
+[[main]]
+name = "饼干初下"
+weight = 20
+url = "/docs/新版标准日本语初级下册/饼干老师/001第二十五课/"
+parent = "xbr"
+
+[[main]]
+name = "饼干中上"
+weight = 30
+url = "/docs/新版标准日本语中级上册/饼干老师/001基础知识总结/"
+parent = "xbr"
+
+[[main]]
+  name = "语法"
+  weight = 21
+  identifier = "grammar"
 
 [[main]]
   name = "对比"
   url = "/compare/"
+  weight = 26
+  parent = 'grammar'
+
+[[main]]
+  name = "N5初级语法"
+  url = "/grammar/N5"
   weight = 21
+  parent = 'grammar'
+[[main]]
+  name = "N4进阶语法"
+  url = "/grammar/N4"
+  weight = 22
+  parent = 'grammar'
+[[main]]
+  name = "N3中级语法"
+  url = "/grammar/N3"
+  weight = 23
+  parent = 'grammar'
+[[main]]
+  name = "N2中高语法"
+  url = "/grammar/N2"
+  weight = 24
+  parent = 'grammar'
+[[main]]
+  name = "N1高级语法"
+  url = "/grammar/N1"
+  weight = 25
+  parent = 'grammar'
 
 [[main]]
-  name = "新标日笔记"
-  weight = 10
-  identifier = "xbr"
+name = "文章"
+weight = 22
+identifier = 'articles'
 
 [[main]]
-  name = "五十音"
-  weight = 1
-  identifier = "50yin"
+  name = "随笔"
+  url = "/blog/"
+  weight = 21
+  parent = 'articles'
 
 [[main]]
-  name = "饼干老师"
-  weight = 1
-  identifier = "binggan"
-  url = "/docs/五十音/饼干老师五十音/"
-  parent = "50yin"
-
+  name = "动漫"
+  url = "/v/anime"
+  weight = 22
+  parent = 'articles'
 [[main]]
-  name = "初级上册"
-  weight = 10
-  url = "/docs/新版标准日本语初级上册/饼干老师/002第一课/"
-  parent = "xbr"
-
-[[main]]
-  name = "初级下册"
-  weight = 20
-  url = "/docs/新版标准日本语初级下册/饼干老师/001第二十五课/"
-  parent = "xbr"
-
-[[main]]
-  name = "中级上册"
-  weight = 30
-  url = "/docs/新版标准日本语中级上册/饼干老师/001基础知识总结/"
-  parent = "xbr"
+  name = "影视"
+  url = "/v/dorama"
+  weight = 23
+  parent = 'articles'
 
 [[social]]
   name = "GitHub"

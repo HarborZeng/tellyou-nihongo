@@ -93,7 +93,7 @@ lastMod = true
 
 [voice]
   enabled = true
-  speaker = "xiaoxiao"
+  speaker = ""
   pitch = 1
   rate = 1
 
