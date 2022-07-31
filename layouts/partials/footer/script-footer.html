@@ -28,16 +28,16 @@
   {{ $slice = $slice | append $clipBoard -}}
 {{ end -}}
 
-{{ if .Site.Params.options.translate -}}
-  {{ $translateJAToZH := resources.Get "js/translate-ja-to-zh.js" -}}
-  {{ $translateJAToZH := $translateJAToZH | js.Build -}}
-  {{ $slice = $slice | append $translateJAToZH -}}
+{{ if .Site.Params.voice.enabled -}}
+{{ $reader := resources.Get "js/read-ja.js" -}}
+{{ $reader := $reader | resources.ExecuteAsTemplate "read-ja.js" . -}}
+{{ $slice = $slice | append $reader -}}
 {{ end -}}
 
-{{ if .Site.Params.voice.enabled -}}
-  {{ $reader := resources.Get "js/read-ja.js" -}}
-  {{ $reader := $reader | resources.ExecuteAsTemplate "read-ja.js" . -}}
-  {{ $slice = $slice | append $reader -}}
+{{ if .Site.Params.options.translate -}}
+{{ $translateJAToZH := resources.Get "js/translate-ja-to-zh.js" -}}
+{{ $translateJAToZH := $translateJAToZH | js.Build -}}
+{{ $slice = $slice | append $translateJAToZH -}}
 {{ end -}}
 
 {{ if .Site.Params.options.instantPage -}}

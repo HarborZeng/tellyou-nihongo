@@ -94,6 +94,8 @@ lastMod = true
 [voice]
   enabled = true
   speaker = "xiaoxiao"
+  pitch = 1
+  rate = 1
 
 [menu]
   [menu.section]
