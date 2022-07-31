@@ -74,9 +74,14 @@ parent = "xbr"
   identifier = "grammar"
 
 [[main]]
-  name = "对比"
-  url = "/compare/"
+  name = "单词对比"
+  url = "/compare/vocab/"
   weight = 26
+  parent = 'grammar'
+[[main]]
+  name = "语法对比"
+  url = "/compare/grammar/"
+  weight = 27
   parent = 'grammar'
 
 [[main]]

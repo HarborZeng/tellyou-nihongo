@@ -2,6 +2,7 @@
 .contributors.list .card,
 .compare.list .card,
 .v.list .card,
+.grammar.list .card,
 .blog.list .card {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -12,6 +13,7 @@
 .contributors.list .card:hover,
 .compare.list .card:hover,
 .v.list .card:hover,
+.grammar.list .card:hover,
 .blog.list .card:hover {
   transform: scale(1.025);
 }
@@ -20,6 +22,7 @@
 .contributors.list .card-body,
 .compare.list .card-body,
 .v.list .card-body,
+.grammar.list .card-body,
 .blog.list .card-body {
   padding: 0 2rem 1rem;
 }

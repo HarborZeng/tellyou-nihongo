@@ -28,6 +28,7 @@ module.exports = {
         't-animated-background',
         'compare',
         'v',
+        'grammar',
         ...whitelister([
           './assets/scss/components/_alerts.scss',
           './assets/scss/components/_buttons.scss',
