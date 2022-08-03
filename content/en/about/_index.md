@@ -23,6 +23,8 @@ images: []
 
 源代码：<https://github.com/HarborZeng/tellyou-nihongo/blob/master/assets/js/read-ja.js>
 
+优先采用浏览器内置在线发音，没有在线发音会使用本地发音，如果本地没有日文语音包则发音不正常。推荐使用 **Edge** 浏览器进行访问，语音柔和自然准确。
+
 阅读更多：
 
 1. [大声朗读pwa应用](https://github.com/guozhigq/ReadAloud)
