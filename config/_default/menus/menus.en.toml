@@ -34,39 +34,39 @@
 #   weight = 15
 
 [[main]]
-name = "五十音"
-weight = 1
-identifier = "50yin"
+  name = "五十音"
+  weight = 1
+  identifier = "50yin"
 
 [[main]]
-name = "饼干"
-weight = 1
-identifier = "binggan"
-url = "/docs/五十音/饼干老师五十音/"
-parent = "50yin"
+  name = "饼干"
+  weight = 1
+  identifier = "binggan"
+  url = "/docs/五十音/饼干老师五十音/"
+  parent = "50yin"
 
 [[main]]
-name = "新标日笔记"
-weight = 10
-identifier = "xbr"
+  name = "新标日笔记"
+  weight = 10
+  identifier = "xbr"
 
 [[main]]
-name = "饼干初上"
-weight = 10
-url = "/docs/新版标准日本语初级上册/饼干老师/002第一课/"
-parent = "xbr"
+  name = "饼干初上"
+  weight = 10
+  url = "/docs/新版标准日本语初级上册/饼干老师/002第一课/"
+  parent = "xbr"
 
 [[main]]
-name = "饼干初下"
-weight = 20
-url = "/docs/新版标准日本语初级下册/饼干老师/001第二十五课/"
-parent = "xbr"
+  name = "饼干初下"
+  weight = 20
+  url = "/docs/新版标准日本语初级下册/饼干老师/001第二十五课/"
+  parent = "xbr"
 
 [[main]]
-name = "饼干中上"
-weight = 30
-url = "/docs/新版标准日本语中级上册/饼干老师/001基础知识总结/"
-parent = "xbr"
+  name = "饼干中上"
+  weight = 30
+  url = "/docs/新版标准日本语中级上册/饼干老师/001基础知识总结/"
+  parent = "xbr"
 
 [[main]]
   name = "语法"
@@ -111,9 +111,9 @@ parent = "xbr"
   parent = 'grammar'
 
 [[main]]
-name = "文章"
-weight = 22
-identifier = 'articles'
+  name = "文章"
+  weight = 22
+  identifier = 'articles'
 
 [[main]]
   name = "随笔"
@@ -131,6 +131,12 @@ identifier = 'articles'
   url = "/v/dorama"
   weight = 23
   parent = 'articles'
+
+[[main]]
+  name = "关于"
+  url = "/about/"
+  weight = 999999
+  identifier = "about"
 
 [[social]]
   name = "GitHub"
