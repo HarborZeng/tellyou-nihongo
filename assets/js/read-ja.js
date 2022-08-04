@@ -1,6 +1,6 @@
-//pre-load
-speechSynthesis.getVoices()
 (function () {
+  //pre-load
+  let voices = speechSynthesis.getVoices();
   let docsContent = document.querySelector('.docs-content')
   if (!docsContent) {
     return
@@ -47,7 +47,9 @@ speechSynthesis.getVoices()
       {{ $sp := .Site.Params.voice.speaker -}}
       {{ $pitch := .Site.Params.voice.pitch -}}
       {{ $rate := .Site.Params.voice.rate -}}
-      let voices = speechSynthesis.getVoices();
+      if (!voice) {
+        voices = speechSynthesis.getVoices();
+      }
       let jaVoices = voices.filter(o => o.lang === 'ja-JP' && !o.localService);
       let jaVoicesLocal = voices.filter(o => o.lang === 'ja-JP' && o.localService);
       let index = Math.floor(Math.random() * jaVoices.length);
