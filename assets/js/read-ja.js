@@ -1,3 +1,5 @@
+//pre-load
+speechSynthesis.getVoices()
 (function () {
   let docsContent = document.querySelector('.docs-content')
   if (!docsContent) {
