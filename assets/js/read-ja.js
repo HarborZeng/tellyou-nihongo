@@ -47,7 +47,7 @@
       {{ $sp := .Site.Params.voice.speaker -}}
       {{ $pitch := .Site.Params.voice.pitch -}}
       {{ $rate := .Site.Params.voice.rate -}}
-      if (!voice) {
+      if (!voices) {
         voices = speechSynthesis.getVoices();
       }
       let jaVoices = voices.filter(o => o.lang === 'ja-JP' && !o.localService);
