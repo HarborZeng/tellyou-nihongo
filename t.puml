@@ -1,0 +1,11 @@
+@startuml
+start
+while (foreach索引?)
+  :查询过期时间;
+  if (过期时间) is (不存在或少于一半) then
+    :插入;
+  else(离过期还远)
+  endif
+endwhile
+end
+@enduml

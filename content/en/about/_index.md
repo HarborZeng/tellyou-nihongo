@@ -15,13 +15,11 @@ images: []
 
 ## 关于发音和翻译
 
-例句的发音和翻译目前仅提供正文的 `<ul>` 下的 `<li>` 有发音和翻译按钮。
+例句的发音和翻译目前仅提供正文无序列表的子项有发音和翻译按钮。
 
 ### 发音
 
 发音采用浏览器发音接口。
-
-源代码：<https://github.com/HarborZeng/tellyou-nihongo/blob/master/assets/js/read-ja.js>
 
 优先采用浏览器内置在线发音，没有在线发音会使用本地发音，如果本地没有日文语音包则发音不正常。推荐使用 **Edge** 浏览器进行访问，语音柔和自然准确。
 
@@ -33,8 +31,6 @@ images: []
 ### 翻译
 
 采用腾讯翻译接口。
-
-源代码：<https://github.com/HarborZeng/tellyou-nihongo/blob/master/assets/js/translate-ja-to-zh.js>
 
 阅读更多：
 
