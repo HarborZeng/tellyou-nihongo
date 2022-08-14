@@ -26,7 +26,7 @@
         {{ partial "sidebar/docs-toc.html" . }}
       </nav>
       {{ end -}}
-      {{ .Content | replaceRE `\[([^\]]+)\]\^\(([^\]]+)\)` "<ruby>$1<rt>$2</rt></ruby>" | safeHTML }}
+      {{ .Content | replaceRE `\[([^]]+)]\^\(([^)]+)\)` "<ruby>$1<rt>$2</rt></ruby>" | safeHTML }}
       <div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
         {{ if .Site.Params.lastMod -}}
         {{ partial "main/last-modified.html" . }}
@@ -35,7 +35,7 @@
         {{ partial "main/edit-page.html" . }}
         {{ end -}}
       </div>
-      {{ partial "main/docs-navigation.html" . }}
+      {{ partial "main/docs-navigation-bydate.html" . }}
       {{ if .Site.Params.comments.waline.enabled -}}
       <div id="waline" style="margin-top: 40px"></div>
       {{ end }}

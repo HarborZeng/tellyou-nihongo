@@ -74,17 +74,6 @@
   identifier = "grammar"
 
 [[main]]
-  name = "单词对比"
-  url = "/compare/vocab/"
-  weight = 26
-  parent = 'grammar'
-[[main]]
-  name = "语法对比"
-  url = "/compare/grammar/"
-  weight = 27
-  parent = 'grammar'
-
-[[main]]
   name = "N5初级语法"
   url = "/grammar/N5"
   weight = 21
@@ -111,8 +100,25 @@
   parent = 'grammar'
 
 [[main]]
-  name = "文章"
+  name = "对比"
   weight = 22
+  identifier = 'compare'
+
+[[main]]
+  name = "单词对比"
+  url = "/compare/vocab/"
+  weight = 26
+  parent = 'compare'
+
+[[main]]
+  name = "语法对比"
+  url = "/compare/grammar/"
+  weight = 27
+  parent = 'compare'
+
+[[main]]
+  name = "文章"
+  weight = 23
   identifier = 'articles'
 
 [[main]]
@@ -124,13 +130,32 @@
 [[main]]
   name = "动漫"
   url = "/v/anime"
-  weight = 22
-  parent = 'articles'
+  weight = 30
+  identifier = "anime"
+
+[[main]]
+  name = "间谍过家家"
+  url = "/v/anime/间谍过家家"
+  weight = 1
+  parent = 'anime'
+
+[[main]]
+  name = "夏日重现"
+  url = "/v/anime/夏日重现"
+  weight = 2
+  parent = 'anime'
+
 [[main]]
   name = "影视"
   url = "/v/dorama"
-  weight = 23
-  parent = 'articles'
+  weight = 40
+  identifier = "dorama"
+
+[[main]]
+  name = "逃避可耻但有用"
+  url = "/v/dorama/逃避可耻但有用"
+  weight = 1
+  parent = 'dorama'
 
 [[main]]
   name = "关于"

@@ -5,7 +5,8 @@
       <h1 class="text-center">{{ .Title }}</h1>
       <div class="text-center">{{ .Content }}</div>
 			<div class="card-list">
-				{{ $paginator := .Paginate (.Data.Pages) -}}
+<!--        {{ $paginator := .Paginate (where .Site.RegularPages.ByDate "Section" .Section ) -}}-->
+        {{ $paginator := .Paginate (.Data.Pages.ByDate) -}}
 				{{ range $paginator.Pages -}}
 					<div class="card">
 						<div class="card-body">
