@@ -52,7 +52,7 @@ responsive = false
 landscapePhotoWidths = [900, 500]
 portraitPhotoWidths = [800, 500]
 lqipWidth = "100x"
-smallLimit = "300"
+smallLimit = "1920"
 
 # Footer
 footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
