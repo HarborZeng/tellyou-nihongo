@@ -74,29 +74,19 @@
   identifier = "grammar"
 
 [[main]]
-  name = "N5初级语法"
-  url = "/grammar/N5"
+  name = "新标日初级上册"
+  url = "/grammar/xbr-p1"
   weight = 21
   parent = 'grammar'
 [[main]]
-  name = "N4进阶语法"
-  url = "/grammar/N4"
+  name = "新标日初级下册"
+  url = "/grammar/xbr-p2"
   weight = 22
   parent = 'grammar'
 [[main]]
-  name = "N3中级语法"
-  url = "/grammar/N3"
+  name = "新标日中级上册"
+  url = "/grammar/xbr-m1"
   weight = 23
-  parent = 'grammar'
-[[main]]
-  name = "N2中高语法"
-  url = "/grammar/N2"
-  weight = 24
-  parent = 'grammar'
-[[main]]
-  name = "N1高级语法"
-  url = "/grammar/N1"
-  weight = 25
   parent = 'grammar'
 
 [[main]]
