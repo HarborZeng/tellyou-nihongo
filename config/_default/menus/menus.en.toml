@@ -129,11 +129,11 @@
   weight = 1
   parent = 'anime'
 
-[[main]]
-  name = "夏日重现"
-  url = "/v/anime/夏日重现"
-  weight = 2
-  parent = 'anime'
+#[[main]]
+#  name = "夏日重现"
+#  url = "/v/anime/夏日重现"
+#  weight = 2
+#  parent = 'anime'
 
 [[main]]
   name = "影视"

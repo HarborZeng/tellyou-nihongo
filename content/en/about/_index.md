@@ -35,7 +35,7 @@ images: []
 阅读更多：
 
 1. [腾讯翻译API接口](https://cloud.tencent.com/document/api/551/15619)
-2. [Netlify Function](https://www.netlify.com/products/functions/)
+2. [Netlify Functions](https://www.netlify.com/products/functions/)
 
 ## 如何贡献
 
@@ -49,4 +49,4 @@ images: []
 | :-: | :-: |
 |    支付宝收款码  |   微信赞赏码   |
 
-打赏任意即可联系上站主。
+支付宝打赏任意即可联系上站主。
