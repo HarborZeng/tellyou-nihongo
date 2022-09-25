@@ -67,6 +67,11 @@
   weight = 30
   url = "/docs/新版标准日本语中级上册/饼干老师/001基础知识总结/"
   parent = "xbr"
+[[main]]
+  name = "饼干中下"
+  weight = 40
+  url = "/docs/新版标准日本语中级下册/饼干老师/001第十七课/"
+  parent = "xbr"
 
 [[main]]
   name = "语法"
