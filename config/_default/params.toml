@@ -105,5 +105,5 @@ lastMod = true
 [comments]
   [comments.waline]
     enabled = true
-    serverUrl = "https://tellyou-nihonngo-waline.vercel.app/"
+    serverUrl = "https://vercel-nihongo.tellyouwhat.cn/"
     pageSize = 15
