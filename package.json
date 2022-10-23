@@ -38,21 +38,21 @@
   "devDependencies": {
     "@babel/cli": "^7.18",
     "@babel/core": "^7.18",
-    "@babel/preset-env": "^7.18",
+    "@babel/preset-env": "^7.19",
     "@fullhuman/postcss-purgecss": "^4.1",
     "auto-changelog": "^2.4",
     "autoprefixer": "^10.4",
     "bootstrap": "^5.1",
     "clipboard": "^2.0",
-    "eslint": "^8.19",
+    "eslint": "^8.25",
     "exec-bin": "^1.0.0",
     "flexsearch": "^0.7.21",
-    "highlight.js": "^11.4",
+    "highlight.js": "^11.6",
     "hugo-installer": "^3.1",
     "instant.page": "^5.1",
     "katex": "^0.16",
     "lazysizes": "^5.3",
-    "markdownlint-cli2": "^0.4.0",
+    "markdownlint-cli2": "^0.5.1",
     "mermaid": "^9.1",
     "node-fetch": "^3.2",
     "postcss": "^8.4",
@@ -60,7 +60,7 @@
     "purgecss-whitelister": "^2.4",
     "shx": "^0.3.4",
     "stylelint": "^14.3",
-    "stylelint-config-standard-scss": "^4.0"
+    "stylelint-config-standard-scss": "^5.0"
   },
   "otherDependencies": {
     "hugo": "0.92.1"
