@@ -3,6 +3,7 @@
 .compare.list .card,
 .v.list .card,
 .grammar.list .card,
+.resources.list .card,
 .blog.list .card {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -14,6 +15,7 @@
 .compare.list .card:hover,
 .v.list .card:hover,
 .grammar.list .card:hover,
+.resources.list .card:hover,
 .blog.list .card:hover {
   transform: scale(1.025);
 }
@@ -23,6 +25,7 @@
 .compare.list .card-body,
 .v.list .card-body,
 .grammar.list .card-body,
+.resources.list .card-body,
 .blog.list .card-body {
   padding: 0 2rem 1rem;
 }

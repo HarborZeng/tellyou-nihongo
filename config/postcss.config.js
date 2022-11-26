@@ -29,6 +29,7 @@ module.exports = {
         'compare',
         'v',
         'grammar',
+        'resources',
         ...whitelister([
           './assets/scss/components/_alerts.scss',
           './assets/scss/components/_buttons.scss',
