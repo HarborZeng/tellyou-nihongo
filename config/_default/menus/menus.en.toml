@@ -124,7 +124,6 @@
 
 [[main]]
   name = "动漫"
-  url = "/v/anime"
   weight = 30
   identifier = "anime"
 
@@ -142,7 +141,6 @@
 
 [[main]]
   name = "影视"
-  url = "/v/dorama"
   weight = 40
   identifier = "dorama"
 
