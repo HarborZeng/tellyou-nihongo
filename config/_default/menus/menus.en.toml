@@ -121,6 +121,11 @@
   url = "/blog/"
   weight = 21
   parent = 'articles'
+[[main]]
+  name = "随笔"
+  url = "/resources/"
+  weight = 22
+  parent = 'articles'
 
 [[main]]
   name = "动漫"
