@@ -27,7 +27,8 @@ module.exports = {
         't-placeholder',
         't-animated-background',
         'compare',
-        'v',
+        'anime',
+        'dorama',
         'grammar',
         'resources',
         ...whitelister([

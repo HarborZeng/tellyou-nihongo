@@ -134,7 +134,7 @@
 
 [[main]]
   name = "间谍过家家"
-  url = "/v/anime/间谍过家家"
+  url = "/anime/间谍过家家"
   weight = 1
   parent = 'anime'
 
@@ -151,7 +151,7 @@
 
 [[main]]
   name = "逃避可耻但有用"
-  url = "/v/dorama/逃避可耻但有用"
+  url = "/dorama/逃避可耻但有用"
   weight = 1
   parent = 'dorama'
 
