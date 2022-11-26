@@ -122,7 +122,7 @@
   weight = 21
   parent = 'articles'
 [[main]]
-  name = "随笔"
+  name = "资源"
   url = "/resources/"
   weight = 22
   parent = 'articles'
