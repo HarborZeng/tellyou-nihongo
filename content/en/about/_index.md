@@ -53,4 +53,3 @@ images: []
 
 > PS：如果图裂了，说明站主的内容存储服务欠费了，请联系微信号 xiaoyao1682c 提醒续费。
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d05f721b-f63c-45d4-8487-fcae99215117/deploy-status)](https://app.netlify.com/sites/tellyouja/deploys)
