@@ -126,7 +126,7 @@
 [[main]]
   name = "边学边玩"
   weight = 30
-  identifier = "play"  
+  identifier = "play"
 
 [[main]]
   name = "间谍过家家"
@@ -135,8 +135,8 @@
   parent = 'play'
 
 [[main]]
-  name = "原神"
-  url = "/game/原神"
+  name = "原神-蒙德篇"
+  url = "/game/原神-蒙德篇"
   weight = 2
   parent = 'play'
 
