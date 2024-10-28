@@ -95,32 +95,28 @@
   parent = 'grammar'
 
 [[main]]
-  name = "对比"
-  weight = 22
-  identifier = 'compare'
-
-[[main]]
-  name = "单词对比"
-  url = "/compare/vocab/"
-  weight = 26
-  parent = 'compare'
-
-[[main]]
-  name = "语法对比"
-  url = "/compare/grammar/"
-  weight = 27
-  parent = 'compare'
-
-[[main]]
   name = "文章"
   weight = 23
   identifier = 'articles'
+
+[[main]]
+  name = "单词"
+  url = "/compare/vocab/"
+  weight = 26
+  parent = 'articles'
+
+[[main]]
+  name = "语法"
+  url = "/compare/grammar/"
+  weight = 27
+  parent = 'articles'
 
 [[main]]
   name = "随笔"
   url = "/blog/"
   weight = 21
   parent = 'articles'
+
 [[main]]
   name = "资源"
   url = "/resources/"
@@ -128,32 +124,21 @@
   parent = 'articles'
 
 [[main]]
-  name = "动漫"
+  name = "边学边玩"
   weight = 30
-  identifier = "anime"
+  identifier = "play"  
 
 [[main]]
   name = "间谍过家家"
   url = "/anime/间谍过家家"
   weight = 1
-  parent = 'anime'
-
-#[[main]]
-#  name = "夏日重现"
-#  url = "/v/anime/夏日重现"
-#  weight = 2
-#  parent = 'anime'
+  parent = 'play'
 
 [[main]]
-  name = "影视"
-  weight = 40
-  identifier = "dorama"
-
-[[main]]
-  name = "逃避可耻但有用"
-  url = "/dorama/逃避可耻但有用"
-  weight = 1
-  parent = 'dorama'
+  name = "原神"
+  url = "/game/原神"
+  weight = 2
+  parent = 'play'
 
 [[main]]
   name = "关于"

@@ -26,9 +26,8 @@ module.exports = {
         'btn-translate',
         't-placeholder',
         't-animated-background',
-        'compare',
+        'game',
         'anime',
-        'dorama',
         'grammar',
         'resources',
         ...whitelister([
