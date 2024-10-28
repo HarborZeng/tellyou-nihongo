@@ -28,6 +28,7 @@ module.exports = {
         't-animated-background',
         'game',
         'anime',
+        'compare',
         'grammar',
         'resources',
         ...whitelister([
