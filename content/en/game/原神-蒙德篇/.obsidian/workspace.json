@@ -11,14 +11,10 @@
             "id": "5e6383a7cb59c79a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01.風を捕まえる異邦人（一）.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "01.風を捕まえる異邦人（一）"
+              "title": "新标签页"
             }
           }
         ]
@@ -166,9 +162,9 @@
   },
   "active": "5e6383a7cb59c79a",
   "lastOpenFiles": [
-    "模板.md",
+    "02.風を捕まえる異邦人（二）.md",
     "01.風を捕まえる異邦人（一）.md",
-    "03.風を捕まえる異邦人（三）.md",
-    "02.風を捕まえる異邦人（二）.md"
+    "模板.md",
+    "03.風を捕まえる異邦人（三）.md"
   ]
 }
