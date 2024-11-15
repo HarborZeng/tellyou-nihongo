@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7c9b0978a5e37866",
+        "id": "fe1e77f9086a103f",
         "type": "tabs",
         "children": [
           {
-            "id": "5e6383a7cb59c79a",
+            "id": "bffc716a123d525c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "03.風を捕まえる異邦人（三）.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "03.風を捕まえる異邦人（三）"
             }
           }
         ]
@@ -108,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01.風を捕まえる異邦人（一）.md",
+                "file": "03.風を捕まえる異邦人（三）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "01.風を捕まえる異邦人（一） 的出链列表"
+              "title": "03.風を捕まえる異邦人（三） 的出链列表"
             }
           },
           {
@@ -135,18 +139,28 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01.風を捕まえる異邦人（一）.md"
+                "file": "03.風を捕まえる異邦人（三）.md"
               },
               "icon": "lucide-list",
-              "title": "01.風を捕まえる異邦人（一） 的大纲"
+              "title": "03.風を捕まえる異邦人（三） 的大纲"
+            }
+          },
+          {
+            "id": "2362ac4b7287e63e",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -160,11 +174,13 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "5e6383a7cb59c79a",
+  "active": "bffc716a123d525c",
   "lastOpenFiles": [
     "02.風を捕まえる異邦人（二）.md",
-    "01.風を捕まえる異邦人（一）.md",
+    "03.風を捕まえる異邦人（三）.md",
+    "未命名.md",
     "模板.md",
-    "03.風を捕まえる異邦人（三）.md"
+    "01.風を捕まえる異邦人（一）.md",
+    "_index.md"
   ]
 }
