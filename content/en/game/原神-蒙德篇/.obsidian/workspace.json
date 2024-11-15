@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03.風を捕まえる異邦人（三）.md",
+                "file": "01.風を捕まえる異邦人（一）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03.風を捕まえる異邦人（三）"
+              "title": "01.風を捕まえる異邦人（一）"
             }
           }
         ]
@@ -93,7 +93,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01.風を捕まえる異邦人（一）.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "01.風を捕まえる異邦人（一） 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -112,12 +111,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03.風を捕まえる異邦人（三）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "03.風を捕まえる異邦人（三） 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -155,12 +153,12 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,9 +176,9 @@
   "lastOpenFiles": [
     "02.風を捕まえる異邦人（二）.md",
     "03.風を捕まえる異邦人（三）.md",
+    "01.風を捕まえる異邦人（一）.md",
     "未命名.md",
     "模板.md",
-    "01.風を捕まえる異邦人（一）.md",
     "_index.md"
   ]
 }
