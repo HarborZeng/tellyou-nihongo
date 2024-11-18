@@ -1,5 +1,5 @@
 ---
-title: "第一幕"
+title: "第二幕：涙のない明日のために"
 date: 2024-10-27T23:18:02+08:00
 draft: false
 images: []
