@@ -29,23 +29,25 @@ function translateJAToZH(jaText) {
       //prevent from multiple clicking
       btn.disabled = true
 
-      let jaText = ''
-      let node = li.firstChild
-      let lastNode
-      while (node && node.nodeName !== 'BUTTON') {
-        if (node.nodeName === '#text') {
-          jaText += node.nodeValue
-          if (lastNode) {
-            node = lastNode
-            lastNode = null
+      let jaText = '';
+      let node = li.firstChild;
+      
+      while (node) {
+          if (node.nodeName === '#text') {
+              jaText += node.nodeValue;
+          } else if (node.nodeName !== 'BUTTON') {
+              // 如果是元素节点，递归提取其子节点的文本
+              let childNode = node.firstChild;
+              while (childNode) {
+                  if (childNode.nodeName === '#text') {
+                      jaText += childNode.nodeValue;
+                  }
+                  childNode = childNode.nextSibling;
+              }
           }
-        } else {
-          lastNode = node
-          node = node.firstChild
-          continue
-        }
-        node = node.nextSibling
+          node = node.nextSibling;
       }
+      
       jaText = jaText.replaceAll(/（[^）]+）/g, '')
 
       if (!jaText) {
