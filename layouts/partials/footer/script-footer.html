@@ -69,6 +69,10 @@
   {{ $slice = $slice | append $katexConfig -}}
 {{ end -}}
 
+{{ $tableJS := resources.Get "js/table.js" -}}
+{{ $tableJSConfig := $tableJS | js.Build -}}
+{{ $slice = $slice | append $tableJSConfig -}}
+
 {{ $js := $slice | resources.Concat "main.js" -}}
 
 {{ if eq (hugo.Environment) "development" -}}

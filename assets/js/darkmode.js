@@ -1,6 +1,6 @@
 const mode = document.getElementById('mode');
 
-if (mode !== null) {
+if (mode) {
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
 
