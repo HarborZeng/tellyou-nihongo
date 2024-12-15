@@ -1,7 +1,7 @@
 (function () {
   //pre-load
   speechSynthesis.getVoices();
-  
+
   let docsContent = document.querySelector('.docs-content')
   if (!docsContent) {
     return
@@ -22,23 +22,28 @@
       //prevent from multiple clicking
       btn.disabled = true
 
-      let jaText = ''
-      let node = li.firstChild
-      let lastNode
-      while (node && node.nodeName !== 'BUTTON') {
+      let jaText = '';
+      let node = li.firstChild;
+
+      while (node) {
         if (node.nodeName === '#text') {
-          jaText += node.nodeValue
-          if (lastNode) {
-            node = lastNode
-            lastNode = null
+          jaText += node.nodeValue;
+        } else if (node.nodeName !== 'BUTTON') {
+          // 如果是元素节点，递归提取其子节点的文本
+          let childNode = node.firstChild;
+          while (childNode) {
+            if (childNode.nodeName === '#text') {
+              jaText += childNode.nodeValue;
+            } else if (childNode.nodeName === "RUBY") {
+              // 特殊处理ruby标签
+              jaText += childNode.lastChild.textContent;
+            }
+            childNode = childNode.nextSibling;
           }
-        } else {
-          lastNode = node
-          node = node.firstChild
-          continue
         }
-        node = node.nextSibling
+        node = node.nextSibling;
       }
+
       jaText = jaText.replaceAll(/（[^）]+）/g, '')
 
       if (!jaText) {

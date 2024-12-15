@@ -31,23 +31,26 @@ function translateJAToZH(jaText) {
 
       let jaText = '';
       let node = li.firstChild;
-      
+
       while (node) {
-          if (node.nodeName === '#text') {
-              jaText += node.nodeValue;
-          } else if (node.nodeName !== 'BUTTON') {
-              // 如果是元素节点，递归提取其子节点的文本
-              let childNode = node.firstChild;
-              while (childNode) {
-                  if (childNode.nodeName === '#text') {
-                      jaText += childNode.nodeValue;
-                  }
-                  childNode = childNode.nextSibling;
-              }
+        if (node.nodeName === '#text') {
+          jaText += node.nodeValue;
+        } else if (node.nodeName !== 'BUTTON') {
+          // 如果是元素节点，递归提取其子节点的文本
+          let childNode = node.firstChild;
+          while (childNode) {
+            if (childNode.nodeName === '#text') {
+              jaText += childNode.nodeValue;
+            } else if (childNode.nodeName === "RUBY") {
+              // 特殊处理ruby标签
+              jaText += childNode.lastChild.textContent;
+            }
+            childNode = childNode.nextSibling;
           }
-          node = node.nextSibling;
+        }
+        node = node.nextSibling;
       }
-      
+
       jaText = jaText.replaceAll(/（[^）]+）/g, '')
 
       if (!jaText) {

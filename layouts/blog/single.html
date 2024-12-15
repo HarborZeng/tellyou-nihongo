@@ -7,7 +7,10 @@
         {{ partial "main/blog-meta.html" . }}
       </div>
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      {{ .Content | replaceRE `\[([^]]+)]\^\(([^)]+)\)` "<ruby>$1<rt>$2</rt></ruby>" | safeHTML }}
+      {{ .Content |
+      replaceRE `\[([^]]+)]\^\(([^)]+)\)` "<ruby>$1<rt>$2</rt></ruby>" |
+      replaceRE `==([^=]+)==` `<highlight>$1</highlight>` |
+      safeHTML }}
     </article>
     <hr/>
     {{ if .Site.Params.comments.waline.enabled -}}
