@@ -28,6 +28,10 @@
   {{ $slice = $slice | append $clipBoard -}}
 {{ end -}}
 
+{{ $tableJS := resources.Get "js/table.js" -}}
+{{ $tableJSConfig := $tableJS | js.Build -}}
+{{ $slice = $slice | append $tableJSConfig -}}
+
 {{ if .Site.Params.voice.enabled -}}
 {{ $reader := resources.Get "js/read-ja.js" -}}
 {{ $reader := $reader | resources.ExecuteAsTemplate "read-ja.js" . -}}
@@ -68,10 +72,6 @@
   {{ $katexConfig := $katexConfig | js.Build -}}
   {{ $slice = $slice | append $katexConfig -}}
 {{ end -}}
-
-{{ $tableJS := resources.Get "js/table.js" -}}
-{{ $tableJSConfig := $tableJS | js.Build -}}
-{{ $slice = $slice | append $tableJSConfig -}}
 
 {{ $js := $slice | resources.Concat "main.js" -}}
 

@@ -29,6 +29,9 @@
         injectReadButton(it, 'afterbegin')
       }
     })
+  docsContent.querySelectorAll('.vocabulary').forEach((it) => {
+    injectReadButton(it, 'afterbegin')
+  })
 })()
 
 function injectReadButton(li, where) {
@@ -80,8 +83,6 @@ function addVoiceHandler(btn, node) {
     if (!jaText) {
       return
     }
-
-    console.log("jaText", jaText)
 
     {{ $sp := .Site.Params.voice.speaker -}}
     {{ $pitch := .Site.Params.voice.pitch -}}

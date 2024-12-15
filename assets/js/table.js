@@ -5,6 +5,6 @@ for (const table of tables) {
   const firstColumnTds = table.querySelectorAll('tr td:first-child');
   // 可以遍历获取到的元素集合，添加class
   firstColumnTds.forEach(td => {
-    td.classList.add('space-no-wrap');
+    td.classList.add('space-no-wrap', 'vocabulary');
   });
 }
