@@ -12,7 +12,8 @@
     })
   docsContent.querySelectorAll('p').
     forEach((it) => {
-      if (it.textContent.startsWith('[speaker]')) {
+      if (it.textContent.startsWith('[speaker] ')) {
+        it.removeChild(it.firstChild)
         injectReadButton(it, 'afterbegin')
       }
       if (it.textContent.endsWith(":")) {
@@ -72,7 +73,7 @@ function addVoiceHandler(btn, node) {
     }
 
     jaText = jaText.replaceAll(/（[^）]+）/g, '')
-    jaText = jaText.replaceAll('[speaker]', '')
+    jaText = jaText.replaceAll('[speaker] ', '')
     jaText = jaText.substring(jaText.indexOf('：'))
     jaText = jaText.substring(jaText.indexOf(':'))
 
