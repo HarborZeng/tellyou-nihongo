@@ -13,10 +13,18 @@
   docsContent.querySelectorAll('p').
     forEach((it) => {
       if (it.textContent.startsWith('[speaker]')) {
-        // it.textContent = it.textContent.replace('[speaker]', '')
         injectReadButton(it, 'afterbegin')
       }
-      if (it.textContent.startsWith('[speaker]')) {
+      if (it.textContent.endsWith(":")) {
+        return
+      }
+      if (it.textContent.endsWith("：")) {
+        return
+      }
+      if (it.textContent.indexOf("：")>0) {
+        injectReadButton(it, 'afterbegin')
+      }
+      if (it.textContent.indexOf(":")>0) {
         injectReadButton(it, 'afterbegin')
       }
     })
@@ -64,6 +72,9 @@ function addVoiceHandler(btn, node) {
     }
 
     jaText = jaText.replaceAll(/（[^）]+）/g, '')
+    jaText = jaText.replaceAll('[speaker]', '')
+    jaText = jaText.substring(jaText.indexOf('：'))
+    jaText = jaText.substring(jaText.indexOf(':'))
 
     if (!jaText) {
       return
