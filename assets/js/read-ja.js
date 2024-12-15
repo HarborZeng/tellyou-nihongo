@@ -12,7 +12,13 @@
     })
   docsContent.querySelectorAll('p').
     forEach((it) => {
-      injectReadButton(it, 'beforebegin')
+      if (it.textContent.startsWith('[speaker]')) {
+        // it.textContent = it.textContent.replace('[speaker]', '')
+        injectReadButton(it, 'afterbegin')
+      }
+      if (it.textContent.startsWith('[speaker]')) {
+        injectReadButton(it, 'afterbegin')
+      }
     })
 })()
 
