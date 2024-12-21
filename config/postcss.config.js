@@ -31,6 +31,7 @@ module.exports = {
         'compare',
         'grammar',
         'resources',
+        'space-no-wrap',
         ...whitelister([
           './assets/scss/components/_alerts.scss',
           './assets/scss/components/_buttons.scss',
