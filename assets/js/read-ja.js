@@ -100,24 +100,30 @@ function addVoiceHandler(btn, jaText) {
     {{ $sp := .Site.Params.voice.speaker -}}
     {{ $pitch := .Site.Params.voice.pitch -}}
     {{ $rate := .Site.Params.voice.rate -}}
-    let voices = speechSynthesis.getVoices();
-    let jaVoices = voices.filter(o => o.lang === 'ja-JP' && !o.localService);
-    let jaVoicesLocal = voices.filter(o => o.lang === 'ja-JP' && o.localService);
-    let index = Math.floor(Math.random() * jaVoices.length);
-    let indexLocal = Math.floor(Math.random() * jaVoices.length);
-    if (jaVoices.length === 0 && jaVoicesLocal.length === 0) {
+    const voices = speechSynthesis.getVoices();
+    // console.log(voices)
+    const jaVoices = voices.filter(o =>
+      o.lang === 'ja-JP' || o.lang === 'ja_JP' || o.name.indexOf('日语') >= 0 ||
+      o.name.indexOf('日本語') >= 0 || o.name.indexOf('Japan') >= 0
+    );
+    if (!jaVoices) {
       alert('你的浏览器不支持日语发音')
       btn.disabled = false
       return
     }
+    const jaVoicesLocal = jaVoices.filter(o => o.localService);
+    const jaVoicesOnline = jaVoices.filter(o => !o.localService);
 
     const sentences = splitTextForSpeech(jaText);
     let i = 0
     function speakNext() {
       if (i < sentences.length) {
         const utterThis = new SpeechSynthesisUtterance(sentences[i]);
-
-        utterThis.voice = voices.length === 0 ? jaVoicesLocal[indexLocal] : jaVoices[index]; // 设置说话的声音
+        utterThis.voice = jaVoicesOnline.length > 0 ? jaVoicesOnline[
+            Math.floor(Math.random() * jaVoicesOnline.length)
+          ] : jaVoicesLocal[
+            Math.floor(Math.random() * jaVoicesLocal.length)
+          ]; // 设置说话的声音
         utterThis.pitch = {{ $pitch }}; // 设置音调高低
         utterThis.rate = {{ $rate }}; // 设置说话的速度
         utterThis.onend = function () {
@@ -136,13 +142,7 @@ function addVoiceHandler(btn, jaText) {
         window.speechSynthesis.speak(utterThis);
       }
     }
-
     speakNext(); // 开始播放
-
-    sentences.forEach((sentence, i) => {
-
-    });
-
 }
 
 function resetSpeechSynthesis() {
