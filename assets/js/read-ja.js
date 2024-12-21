@@ -13,7 +13,9 @@
   docsContent.querySelectorAll('p').
     forEach((it) => {
       if (it.textContent.startsWith('[speaker] ')) {
-        it.removeChild(it.firstChild)
+        if (it.firstChild.nodeName === '#text') {
+          it.firstChild.nodeValue = it.firstChild.nodeValue.replace('[speaker] ', '')
+        }
         injectReadButton(it, 'afterbegin')
       }
       if (it.textContent.endsWith(":")) {
