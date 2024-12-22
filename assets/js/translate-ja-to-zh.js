@@ -1,6 +1,7 @@
 // {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
 
 function translateJAToZH(jaText) {
+  console.log("translate", jaText);
   return fetch('/.netlify/functions/tmt-ja-zh', {
     method: 'POST',
     body: jaText,

@@ -79,7 +79,7 @@ function genJaText(node) {
           jaText += childNode.nodeValue;
         } else if (childNode.nodeName === "RUBY") {
           // 特殊处理ruby标签
-          jaText += childNode.lastChild.textContent;
+          jaText += childNode.firstChild.textContent;
         }
         childNode = childNode.nextSibling;
       }
@@ -120,6 +120,7 @@ function addVoiceHandler(btn, jaText) {
     let i = 0
     function speakNext() {
       if (i < sentences.length) {
+        console.log("speak", sentences[i])
         const utterThis = new SpeechSynthesisUtterance(sentences[i]);
         utterThis.voice = jaVoicesOnline.length > 0 ? jaVoicesOnline[
             Math.floor(Math.random() * jaVoicesOnline.length)
