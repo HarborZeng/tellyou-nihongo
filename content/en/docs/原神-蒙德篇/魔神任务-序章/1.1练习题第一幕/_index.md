@@ -1,5 +1,5 @@
 ---
-title: 练习题：第一幕：風を捕まえる異邦人
+title: 练习题：第一幕
 draft: false
 images:
 ---
