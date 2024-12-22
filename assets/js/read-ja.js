@@ -117,35 +117,36 @@ function addVoiceHandler(btn, jaText) {
     const jaVoicesOnline = jaVoices.filter(o => !o.localService);
 
     const sentences = splitTextForSpeech(jaText);
-    let i = 0
-    function speakNext() {
-      if (i < sentences.length) {
-        console.log("speak", sentences[i])
-        const utterThis = new SpeechSynthesisUtterance(sentences[i]);
-        utterThis.voice = jaVoicesOnline.length > 0 ? jaVoicesOnline[
-            Math.floor(Math.random() * jaVoicesOnline.length)
-          ] : jaVoicesLocal[
-            Math.floor(Math.random() * jaVoicesLocal.length)
-          ]; // 设置说话的声音
-        utterThis.pitch = {{ $pitch }}; // 设置音调高低
-        utterThis.rate = {{ $rate }}; // 设置说话的速度
-        utterThis.onend = function () {
-          if (i === sentences.length - 1) {
-            btn.disabled = false; // 最后一个句子结束后启用按钮
-          }
-          i++;
-          speakNext(); // 播放下一段
-        };
-
-        utterThis.onerror = function (event) {
-          console.error('Speech synthesis error:', event.error);
-          btn.disabled = false; // 发生错误后启用按钮
-        };
-
-        window.speechSynthesis.speak(utterThis);
+    let i = 0;
+    (function speakNext() {
+      if (i >= sentences.length) {
+        return
       }
-    }
-    speakNext(); // 开始播放
+
+      console.log("speak", sentences[i])
+      const utterThis = new SpeechSynthesisUtterance(sentences[i]);
+      utterThis.voice = jaVoicesOnline.length > 0 ? jaVoicesOnline[
+          Math.floor(Math.random() * jaVoicesOnline.length)
+        ] : jaVoicesLocal[
+          Math.floor(Math.random() * jaVoicesLocal.length)
+        ]; // 设置说话的声音
+      utterThis.pitch = {{ $pitch }}; // 设置音调高低
+      utterThis.rate = {{ $rate }}; // 设置说话的速度
+      utterThis.onend = function () {
+        if (i === sentences.length - 1) {
+          btn.disabled = false; // 最后一个句子结束后启用按钮
+        }
+        i++;
+        speakNext(); // 播放下一段
+      };
+
+      utterThis.onerror = function (event) {
+        console.error('Speech synthesis error:', event.error);
+        btn.disabled = false; // 发生错误后启用按钮
+      };
+
+      window.speechSynthesis.speak(utterThis);
+    })()
 }
 
 function resetSpeechSynthesis() {

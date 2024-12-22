@@ -44,7 +44,7 @@ function translateJAToZH(jaText) {
               jaText += childNode.nodeValue;
             } else if (childNode.nodeName === "RUBY") {
               // 特殊处理ruby标签
-              jaText += childNode.lastChild.textContent;
+              jaText += childNode.firstChild.textContent;
             }
             childNode = childNode.nextSibling;
           }
