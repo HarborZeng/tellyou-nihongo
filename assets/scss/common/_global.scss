@@ -28,6 +28,16 @@ h6,
   margin: 2rem 0 1rem;
 }
 
+h2 {
+  page-break-before: always;
+}
+
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+
 .offcanvas-header {
   border-bottom: 1px solid $gray-300;
   padding-top: 1.0625rem;
