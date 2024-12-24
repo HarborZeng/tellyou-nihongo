@@ -29,7 +29,7 @@ h6,
 }
 
 h2 {
-  page-break-before: always;
+  break-before: page;
 }
 
 @media print {
