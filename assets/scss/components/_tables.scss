@@ -1,5 +1,21 @@
 table {
   @extend .table;
 
-  margin: 2rem 0;
+  margin: 0rem 0;
+}
+
+@media print {
+  .table-container {
+    display: block; /* 需要将容器设为块级 */
+    max-height: 200%; /* 固定高度 */
+    column-count: 2; /* 分为两列 */
+    column-fill: balance; /* 平衡每列的内容高度 */
+    column-gap: 20px; /* 列之间的间距 */
+    overflow: hidden; /* 防止内容超出容器 */
+  }
+
+  table {
+    width: 100%; /* 表格宽度占满列宽 */
+    border-collapse: collapse;
+  }
 }
