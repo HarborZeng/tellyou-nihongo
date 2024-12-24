@@ -1,9 +1,3 @@
-table {
-  @extend .table;
-
-  margin: 0rem 0;
-}
-
 @media print {
   .table-container {
     display: block; /* 需要将容器设为块级 */
