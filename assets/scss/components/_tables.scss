@@ -1,5 +1,15 @@
 table {
   @extend .table;
 
-  margin: 3rem 0;
+  margin: 2rem 0;
+}
+table {
+  border-collapse: collapse; /* 合并边框 */
+  table-layout: auto; /* 根据内容自动调整宽度 */
+  width: auto; /* 表格宽度自适应内容 */
+}
+
+th, td {
+  //border: 1px solid #ccc;
+  padding: 8px;
 }
