@@ -32,6 +32,10 @@
 {{ $tableJSConfig := $tableJS | js.Build -}}
 {{ $slice = $slice | append $tableJSConfig -}}
 
+{{ $h2JS := resources.Get "js/h2.js" -}}
+{{ $h2JSConfig := $h2JS | js.Build -}}
+{{ $slice = $slice | append $h2JSConfig -}}
+
 {{ if .Site.Params.voice.enabled -}}
 {{ $reader := resources.Get "js/read-ja.js" -}}
 {{ $reader := $reader | resources.ExecuteAsTemplate "read-ja.js" . -}}
