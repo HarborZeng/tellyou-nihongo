@@ -33,6 +33,7 @@ module.exports = {
         'resources',
         'space-no-wrap',
         'no-print',
+        'table-container',
         ...whitelister([
           './assets/scss/components/_alerts.scss',
           './assets/scss/components/_buttons.scss',
