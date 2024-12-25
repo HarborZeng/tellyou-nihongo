@@ -34,6 +34,8 @@ module.exports = {
         'space-no-wrap',
         'no-print',
         'table-container',
+        'h2-section',
+        'footnotes',
         ...whitelister([
           './assets/scss/components/_alerts.scss',
           './assets/scss/components/_buttons.scss',
